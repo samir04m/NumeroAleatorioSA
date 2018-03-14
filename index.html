@@ -11,15 +11,89 @@
 	<title>Aleatorio</title>
 
 	<link rel="stylesheet" href="css/materialize.css">
+	<link rel="stylesheet" href="css/material-icons.css">
+	<link rel="stylesheet" href="css/myStyles.css">
+
+	<script type="text/javascript" src="js/fontawesome-all.js"></script>
 
 </head>
-<body>
+<body class="teal darken-3 white-text">
 	
+	<nav>
+		<div class="nav-wrapper teal">
+			<div class="container">
+				<a href="#" class="brand-logo"><i class="fab fa-slack-hash"></i> Random Number</a>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container">
+		<center><h3>Número Aleatorio</h3></center>
+		<div class="row">
+			<div class="col s12 offset-m2 m8 black-text">
+				<div class="card">
+					<div class="card-content">
+						<center><big>Defina un Intervalo</big></center> <br>
+						<div class="container">
+							<div class="row">
+								<div class="col s12 m5">
+									<div class="input-field">
+										<input type="number" name="min" id="min">
+										<label for="min">Valor Minimo</label>
+									</div>
+								</div>
+								<div class="col s12 offset-m2 m5">
+									<div class="input-field">
+										<input type="number" name="max" id="max">
+										<label for="max">Valor Maximo</label>
+									</div>
+								</div>
+							</div>
+							<div class="row center-align">
+								<button class="btn btn-large waves-effect waves-green" onclick="getRandomNumber()">Obtener numero aleatorio</button>
+							</div>
+							<div class="row">
+								<textarea class="materialize-textarea" name="resultado" id="resultado" cols="30" rows="10" placeholder="Presiona la tecla Enter o Espacio"></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer class="page-footer black">
+		<div class="container">
+			<div class="row">
+				<div class="col s12 l6">
+					<h5>Random Number</h5>
+					Te ofrecemos un generador de números o valores de aleatorios, estos valores se encontraran en el intervalo que usted defina.
+				</div>
+				<div class="col s12 offset-l2 l4">
+					<h5>Developer</h5>
+					<a href="https://www.github.com/samir04m" class="white-text">
+						<div class="valign-wrapper link-github" style="min-height: 40px;">
+							<i class="fab fa-github fa-2x"></i>
+							<!-- <span style="font-size: 20px;">Samir Mejia</span>  -->
+							<big style="margin-left: 10px;">Samir Mejia</big>
+							
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="footer-copyright">
+			<div class="container">
+				Copyright © 2018
+				<a class="grey-text text-lighten-4 right" href="http://www.materializecss.com/">Materialize</a>
+			</div>
+		</div>
+	</footer>
 
 	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="js/materialize.js"></script>
 
 	<script type="text/javascript" src="js/myScript.js"></script>
-	
+
 </body>
 </html>
