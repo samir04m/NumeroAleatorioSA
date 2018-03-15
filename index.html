@@ -8,7 +8,7 @@
 	<meta name="keywords" content="HTML,CSS,JavaScript,Git,Github">
 	<meta name="author" content="Samir Mejia">
 
-	<title>Aleatorio</title>
+	<title>Random Number</title>
 
 	<link rel="stylesheet" href="css/materialize.css">
 	<link rel="stylesheet" href="css/material-icons.css">
@@ -17,17 +17,17 @@
 	<script type="text/javascript" src="js/fontawesome-all.js"></script>
 
 </head>
-<body class="teal darken-3 white-text">
+<body class="teal darken-3">
 	
 	<nav>
-		<div class="nav-wrapper teal">
+		<div class="nav-wrapper teal" id="div-nav">
 			<div class="container">
 				<a href="#" class="brand-logo"><i class="fab fa-slack-hash"></i> Random Number</a>
 			</div>
 		</div>
 	</nav>
 
-	<div class="container">
+	<div class="container white-text">
 		<center><h3>Número Aleatorio</h3></center>
 		<div class="row">
 			<div class="col s12 offset-m2 m8 black-text">
@@ -50,10 +50,13 @@
 								</div>
 							</div>
 							<div class="row center-align">
-								<button class="btn btn-large waves-effect waves-green" onclick="getRandomNumber()">Obtener numero aleatorio</button>
+								<button class="btn btn-large waves-effect waves-green pulse tooltipped" id="btn" onclick="getRandomNumber()" data-position="right" data-delay="2000" data-tooltip="Tambien puedes precionar ENTER">Obtener numero aleatorio</button>
 							</div>
 							<div class="row">
-								<textarea class="materialize-textarea" name="resultado" id="resultado" cols="30" rows="10" placeholder="Presiona la tecla Enter o Espacio"></textarea>
+								<div class="teal-text"><big>Resultado </big>
+									<span class="badge white-text circle teal" id="numeroResultados">0</span>
+								</div>
+								<textarea class="materialize-textarea" name="resultado" id="resultado" cols="30" rows="10" placeholder="Presiona la tecla Enter"></textarea>
 							</div>
 						</div>
 					</div>
@@ -89,6 +92,16 @@
 			</div>
 		</div>
 	</footer>
+	
+	<div id="modal-dialog" class="modal">
+		<div class="modal-content black-text">
+			<center><h4>ATENCION!!!</h4></center>
+			<p class="flow-text" id="mensaje-modal"></p>
+		</div>
+		<div class="modal-footer">
+			<a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat">Cerrar</a>
+		</div>
+	</div>
 
 	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="js/materialize.js"></script>
