@@ -16,7 +16,7 @@ body, #btn, #div-nav {
 .input-field input[type=number]{
 	font-size: 20px;
 	padding-left: 5px;
-	/*text-align: center;*/
+	text-align: center;
 }
 
 .input-field label {
@@ -32,4 +32,22 @@ body, #btn, #div-nav {
 textarea#resultado {
 	font-size: 40px;
 	text-align: center;
+}
+
+@media screen and (max-width: 600px){
+	.input-field input[type=number], .input-field > label {
+		font-size: 16px;
+	}
+	textarea#resultado {
+		font-size: 20px;
+	}
+}
+
+.scalable {
+  	transition: transform 1.5s .5s, box-shadow 1.5s;
+}
+
+.scalable:hover {
+ 	transform: scale(1.05); 
+  	box-shadow: 10px 10px 10px rgba(0,0,0,.5);
 }

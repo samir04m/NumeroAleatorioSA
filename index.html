@@ -22,16 +22,17 @@
 	<nav>
 		<div class="nav-wrapper teal" id="div-nav">
 			<div class="container">
-				<a href="#" class="brand-logo"><i class="fab fa-slack-hash"></i> Random Number</a>
+				<a href="#" class="brand-logo truncate"><i class="fab fa-slack-hash"></i> Random Number</a>
 			</div>
 		</div>
 	</nav>
 
 	<div class="container white-text">
-		<center><h3>Número Aleatorio</h3></center>
+		<center><h3 class="hide-on-small-only">Número Aleatorio</h3></center>
+		<div class="show-on-small"><br></div>
 		<div class="row">
 			<div class="col s12 offset-m2 m8 black-text">
-				<div class="card">
+				<div class="card scalable">
 					<div class="card-content">
 						<center><big>Defina un Intervalo</big></center> <br>
 						<div class="container">
@@ -50,7 +51,7 @@
 								</div>
 							</div>
 							<div class="row center-align">
-								<button class="btn btn-large waves-effect waves-green pulse tooltipped" id="btn" onclick="getRandomNumber()" data-position="right" data-delay="2000" data-tooltip="Tambien puedes precionar ENTER">Obtener numero aleatorio</button>
+								<button class="btn btn-large pulse tooltipped" id="btn" onclick="getRandomNumber()" data-position="top" data-delay="2000" data-tooltip="Tambien puedes precionar ENTER">Obtener numero <span class="hide-on-small-only">aleatorio</span></button>
 							</div>
 							<div class="row">
 								<div class="teal-text"><big>Resultado </big>

@@ -63,7 +63,7 @@ function changeBackgroundColor(){
 	}
 
 	document.getElementsByTagName("body")[0].setAttribute("class", colors[indiceColor]);
-	document.getElementById("btn").setAttribute("class", "btn btn-large waves-effect waves-teal pulse tooltipped "+colors[indiceColor]);
+	document.getElementById("btn").setAttribute("class", "btn btn-large pulse tooltipped "+colors[indiceColor]);
 	document.getElementById("div-nav").setAttribute("class", "nav-wrapper "+colors[indiceColor]);
 	document.getElementById("numeroResultados").setAttribute("class", "badge white-text circle "+colors[indiceColor]);
 	indiceColor = indiceColor + 1;
