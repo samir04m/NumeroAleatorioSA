@@ -19,52 +19,55 @@
 </head>
 <body class="teal darken-3">
 	
-	<nav>
-		<div class="nav-wrapper teal" id="div-nav">
-			<div class="container">
-				<a href="#" class="brand-logo truncate"><i class="fab fa-slack-hash"></i> Random Number</a>
+	<main>
+		<nav>
+			<div class="nav-wrapper teal" id="div-nav">
+				<div class="container">
+					<a href="#" class="brand-logo truncate"><i class="fab fa-slack-hash"></i> Random Number</a>
+				</div>
 			</div>
-		</div>
-	</nav>
-
-	<div class="container white-text">
-		<center><h3 class="hide-on-small-only">Número Aleatorio</h3></center>
-		<div class="show-on-small"><br></div>
-		<div class="row">
-			<div class="col s12 offset-m2 m8 black-text">
-				<div class="card scalable">
-					<div class="card-content">
-						<center><big>Defina un Intervalo</big></center> <br>
-						<div class="container">
-							<div class="row">
-								<div class="col s12 m5">
-									<div class="input-field">
-										<input type="number" name="min" id="min">
-										<label for="min">Valor Minimo</label>
+		</nav>
+		
+		<div class="container white-text">
+			<center><h3 class="hide-on-small-only noShow" id="title">Número Aleatorio</h3></center>
+			<div class="hide-on-med-and-up"><br></div>
+			<div class="row">
+				<div class="col s12 offset-m2 m8 black-text">
+					<div class="card scalable noShow opacity0">
+						<div class="card-content">
+							<center><big>Defina un Intervalo</big></center> <br>
+							<div class="container">
+								<div class="row">
+									<div class="col s12 m5">
+										<div class="input-field">
+											<input type="number" name="min" id="min">
+											<label for="min">Valor Minimo</label>
+										</div>
+									</div>
+									<div class="col s12 offset-m2 m5">
+										<div class="input-field">
+											<input type="number" name="max" id="max">
+											<label for="max">Valor Maximo</label>
+										</div>
 									</div>
 								</div>
-								<div class="col s12 offset-m2 m5">
-									<div class="input-field">
-										<input type="number" name="max" id="max">
-										<label for="max">Valor Maximo</label>
+								<div class="row center-align">
+									<button class="btn btn-large pulse tooltipped" id="btnGetRandomNumber" data-position="top" data-delay="2000" data-tooltip="Tambien puedes precionar ENTER">Obtener numero <span class="hide-on-small-only">aleatorio</span></button>
+								</div>
+								<div class="row">
+									<div class="teal-text"><big>Resultado </big>
+										<span class="badge white-text circle teal" id="numeroResultados">0</span>
 									</div>
+									<textarea class="materialize-textarea" name="resultado" id="resultado" cols="30" rows="10" placeholder="Presiona la tecla Enter" disabled="disabled"></textarea>
 								</div>
-							</div>
-							<div class="row center-align">
-								<button class="btn btn-large pulse tooltipped" id="btn" onclick="getRandomNumber()" data-position="top" data-delay="2000" data-tooltip="Tambien puedes precionar ENTER">Obtener numero <span class="hide-on-small-only">aleatorio</span></button>
-							</div>
-							<div class="row">
-								<div class="teal-text"><big>Resultado </big>
-									<span class="badge white-text circle teal" id="numeroResultados">0</span>
-								</div>
-								<textarea class="materialize-textarea" name="resultado" id="resultado" cols="30" rows="10" placeholder="Presiona la tecla Enter"></textarea>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
+	</main>
+	<div id="space"></div>
 
 	<footer class="page-footer black">
 		<div class="container">
@@ -96,7 +99,7 @@
 	
 	<div id="modal-dialog" class="modal">
 		<div class="modal-content black-text">
-			<center><h4>ATENCION!!!</h4></center>
+			<center><h4 id="titulo-modal">Mensaje</h4></center>
 			<p class="flow-text" id="mensaje-modal"></p>
 		</div>
 		<div class="modal-footer">
@@ -107,7 +110,7 @@
 	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="js/materialize.js"></script>
 
-	<script type="text/javascript" src="js/myScript.js"></script>
+	<script type="text/javascript" src="js/myScriptWithjQuery.js"></script>
 
 </body>
 </html>

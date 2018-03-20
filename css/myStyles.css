@@ -44,10 +44,47 @@ textarea#resultado {
 }
 
 .scalable {
-  	transition: transform 1.5s .5s, box-shadow 1.5s;
+  	transition: transform 1.5s .5s, box-shadow 1.5s, opacity 2s;
 }
 
 .scalable:hover {
  	transform: scale(1.05); 
   	box-shadow: 10px 10px 10px rgba(0,0,0,.5);
+}
+
+.noShow {
+	display: none;
+}
+.opacity0 {
+	opacity: 0;
+}
+.card {
+	border-radius: 12px;
+	transition-timing-function: ease-out;
+}
+
+body {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+main {
+	flex: 1 0 auto;
+}
+
+.btn {
+	border-radius: 27px;
+}
+
+#space {
+	height: 50vh;
+}
+
+.modal-content {
+	padding-bottom: 5px !important;
+}
+
+textarea.materialize-textarea:disabled {
+	color: teal !important;
 }
